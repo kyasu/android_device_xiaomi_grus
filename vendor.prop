@@ -187,6 +187,9 @@ ro.vendor.nfc.repair=1
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Radio
+persist.vendor.radio.enableadvancedscan=false
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
