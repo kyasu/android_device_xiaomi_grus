@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # ConsumerIR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi
