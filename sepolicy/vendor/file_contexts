@@ -24,6 +24,10 @@
 /dev/goodix_fp                                u:object_r:fingerprint_device:s0
 /dev/vfsspi                                   u:object_r:fingerprint_device:s0
 
+# Firmware
+/firmware                                     u:object_r:firmware_file:s0
+/bt_firmware                                  u:object_r:bt_firmware_file:s0
+
 # GPS devices
 /dev/bbd_control                              u:object_r:gps_device:s0
 /dev/bbd_patch                                u:object_r:gps_device:s0
@@ -59,6 +63,10 @@
 # Persist files
 /mnt/vendor/persist/audio(/.*)?               u:object_r:persist_audio_file:s0
 /mnt/vendor/persist/camera(/.*)?              u:object_r:persist_camera_file:s0
+
+# Root files
+/persist(/.*)?                                u:object_r:mnt_vendor_file:s0
+/tombstones                                   u:object_r:tombstone_data_file:s0
 
 # Sockets
 /dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
