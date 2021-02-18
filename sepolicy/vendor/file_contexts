@@ -68,6 +68,9 @@
 /persist(/.*)?                                u:object_r:mnt_vendor_file:s0
 /tombstones                                   u:object_r:tombstone_data_file:s0
 
+# Sensors
+/vendor/bin/init\.panel_info\.sh              u:object_r:qti_init_shell_exec:s0
+
 # Sockets
 /dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
 /dev/socket/gps                               u:object_r:gps_socket:s0

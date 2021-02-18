@@ -9,4 +9,6 @@ allow qti_init_shell sysfs_leds:file setattr;
 
 allow qti_init_shell sensors_persist_file:fifo_file { getattr setattr };
 
+allow qti_init_shell vendor_fp_prop:property_service set;
+
 allow qti_init_shell self:capability kill;

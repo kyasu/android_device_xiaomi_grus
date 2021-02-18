@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
+    init.panel_info.sh \
     init.target.rc
 
 # Device-specific settings
