@@ -10,4 +10,6 @@ allow hal_lineage_fod_grus sysfs_graphics:file rw_file_perms;
 
 binder_call(hal_lineage_fod_grus, hal_fingerprint_default)
 
+get_prop(hal_lineage_fod_grus, vendor_fp_prop)
+
 hal_client_domain(hal_lineage_fod_grus, hal_fingerprint)
