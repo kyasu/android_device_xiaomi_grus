@@ -46,6 +46,7 @@
 /vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr                                      u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_grus              u:object_r:hal_lineage_fod_grus_exec:s0
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_grus                                   u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi                                               u:object_r:hal_ir_default_exec:s0
 
 # Persist files
 /mnt/vendor/persist/audio(/.*)?               u:object_r:persist_audio_file:s0
