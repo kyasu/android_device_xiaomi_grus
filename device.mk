@@ -222,6 +222,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor:64 \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
 
 # GPS
