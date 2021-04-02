@@ -1,8 +1,2 @@
-allow ueventd debugfs:dir { open read relabelfrom };
-allow ueventd debugfs:file getattr;
-allow ueventd debugfs_sched_features:file getattr;
-allow ueventd debugfs_wakeup_sources:file getattr;
-allow ueventd qti_debugfs:dir relabelto;
-
 allow ueventd self:capability kill;
 allow ueventd self:capability sys_nice;
