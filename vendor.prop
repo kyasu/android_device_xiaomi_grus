@@ -153,7 +153,6 @@ persist.vendor.data.iwlan.enable=true
 ro.telephony.iwlan_operation_mode=legacy
 
 # NFC
-ro.hardware.nfc_nci=nqx.default
 ro.se.type=HCE,UICC
 ro.vendor.nfc.repair=1
 
