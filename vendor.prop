@@ -183,7 +183,6 @@ vendor.audio.soundtrigger.user.level=60
 
 # Network manager
 persist.vendor.data.iwlan.enable=true
-ro.telephony.iwlan_operation_mode=legacy
 
 # NFC
 ro.se.type=HCE,UICC
