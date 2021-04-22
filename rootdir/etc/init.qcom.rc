@@ -423,6 +423,8 @@ on post-fs-data
 
     start vendor.qcrild
     start vendor.qcrild2
+    start vendor.dataqti
+    start vendor.dataadpl
 
 on property:ro.boot.dp=0x0
     write  /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800/pshold_reboot 7
