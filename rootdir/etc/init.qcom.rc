@@ -234,6 +234,12 @@ on boot
     # Create directory used for display
     mkdir /mnt/vendor/persist/display 0770 system graphics
 
+    # Enable qcrild and data services on boot so process starts in main
+    enable vendor.qcrild
+    enable vendor.qcrild2
+    enable vendor.dataqti
+    enable vendor.dataadpl
+
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
@@ -420,11 +426,6 @@ on post-fs-data
 
     # Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
-
-    start vendor.qcrild
-    start vendor.qcrild2
-    start vendor.dataqti
-    start vendor.dataadpl
 
 on property:ro.boot.dp=0x0
     write  /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800/pshold_reboot 7
