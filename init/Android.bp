@@ -1,0 +1,12 @@
+// Copyright (C) 2021 KudProject Development
+// SPDX-License-Identifier: Apache-2.0
+
+cc_library_static {
+    name: "libinit_grus",
+    srcs: ["init_grus.cpp"],
+    recovery_available: true,
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init"
+    ]
+}
