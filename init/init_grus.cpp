@@ -20,13 +20,15 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-#define MAX_PROP_LIST 5
+#define MAX_PROP_LIST 7
 void property_override_multiple(std::string type, char const value[])
 {
     std::string prop_list[MAX_PROP_LIST] = {
         "ro.product.",
         "ro.product.odm.",
+        "ro.product.product.",
         "ro.product.system.",
+        "ro.product.system_ext.",
         "ro.product.vendor.",
         "ro.vendor.product.",
     };
