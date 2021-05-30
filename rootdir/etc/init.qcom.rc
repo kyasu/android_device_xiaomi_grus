@@ -437,6 +437,9 @@ on post-fs-data
     # Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
 
+    # Init sensors
+    start vendor-sensor-sh
+
 on property:ro.boot.dp=0x0
     write  /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800/pshold_reboot 7
 
@@ -646,7 +649,6 @@ service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.audio-hal
-    start vendor-sensor-sh
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
