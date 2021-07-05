@@ -54,7 +54,6 @@ class FingerprintInscreen : public IFingerprintInscreen {
 
   private:
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
-    int32_t fodPosX, fodPosY, fodSize;
 };
 
 }  // namespace implementation

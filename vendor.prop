@@ -126,8 +126,6 @@ persist.vendor.dpmhalservice.enable=1
 drm.service.enabled=true
 
 # Fingerprint
-persist.vendor.sys.fp.fod.location.X_Y=448,1938
-persist.vendor.sys.fp.fod.size.width_height=185,185
 ro.hardware.fp.fod=true
 
 # FRP
