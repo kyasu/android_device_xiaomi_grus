@@ -31,7 +31,7 @@ cc_binary {
         "liblog",
         "libutils",
         "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
-        "vendor.xiaomi.hardware.fingerprintextension@1.0",
+	"//hardware/xiaomi:vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
 }
 
@@ -40,5 +40,8 @@ cc_library_static {
     srcs: ["FodExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
+    ],
+    header_libs: [
+        "generated_kernel_headers",
     ],
 }

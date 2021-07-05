@@ -38,9 +38,9 @@
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
-#define FOD_DEFAULT_X 445
-#define FOD_DEFAULT_Y 1910
-#define FOD_DEFAULT_SIZE 190
+#define FOD_DEFAULT_X 448
+#define FOD_DEFAULT_Y 1938
+#define FOD_DEFAULT_SIZE 185
 
 namespace {
 
