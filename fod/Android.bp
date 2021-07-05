@@ -16,9 +16,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm710",
-    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm710.rc"],
-    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm710.xml"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus.rc"],
+    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus.xml"],
     srcs: [
         "service.cpp",
         "FingerprintInscreen.cpp",
@@ -36,7 +36,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libfod_extension.xiaomi_sdm710",
+    name: "libfod_extension.xiaomi_grus",
     srcs: ["FodExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"

@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sdm710-common/sdm710-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/grus/grus-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/sdm710-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm710-tavil-snd-card_Button_Jack.kl
+    $(LOCAL_PATH)/keylayout/grus-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/grus-tavil-snd-card_Button_Jack.kl
 
 # IPA
 PRODUCT_PACKAGES += \
@@ -247,7 +247,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sdm710
+    android.hardware.light@2.0-service.xiaomi_grus
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
