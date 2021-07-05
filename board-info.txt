@@ -1,0 +1,1 @@
+require version-trustzone=XF.5.0.2.C5-00006

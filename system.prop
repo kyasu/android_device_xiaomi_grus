@@ -5,6 +5,17 @@ audio.offload.video=true
 ro.af.client_heap_size_kbyte=7168
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
+audio.offload.gapless.enabled=true
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.vendor.audio.ambisonic.auto.profile=false
+persist.vendor.audio.ambisonic.capture=false
+persist.vendor.audio.avs.afe_api_version=2
+persist.vendor.audio.fluence.audiorec=false
+persist.vendor.audio.fluence.tmic.enabled=false
+persist.vendor.audio.hifi.int_codec=true
+persist.vendor.audio.spv3.enable=true
 
 # BPF
 ro.kernel.ebpf.supported=true
@@ -17,15 +28,40 @@ persist.vendor.btstack.enable.twsplussho=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
+bt.max.hfpclient.connections=1
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+persist.vendor.btstack.enable.splita2dp=true
 
 # Camera
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+persist.camera.cfa.thres.front=0
+persist.camera.cfa.thres.rear=200
+persist.camera.sat.fallback.dist=28
+persist.camera.sat.fallback.dist.d=5
+persist.camera.sat.fallback.luxindex=230
+persist.camera.sat.fallback.lux.d=50
+persist.vendor.camera.enableAdvanceFeatures=0x3E7
+persist.vendor.camera.multicam.fpsmatch=TRUE
+persist.vendor.camera.multicam.framesync=1
+persist.vendor.camera.multicam.hwsync=TRUE
+persist.vendor.camera.multicam=TRUE
+
+# Charger
+persist.chg.max_volt_mv=9000
 
 # Data modules
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
+
+# Display
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Display post-processing
 ro.qualcomm.cabl=0
@@ -53,6 +89,17 @@ persist.vendor.ims.disableUserAgent=0
 # Media
 debug.stagefright.omx_default_rank=0
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+av.offload.enable=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
@@ -60,11 +107,26 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q670-14477-1
 
+# Network
+persist.data.netmgrd.qos.enable=true
+
+# NFC
+ro.nfc.port=I2C
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
 # RCS
 persist.rcs.supported=0
+
+# Radio
+persist.radio.NO_STAPA=1
+persist.radio.VT_CAM_INTERFACE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.dynamic_sar=false
+persist.radio.charge_sar_control=false
+persist.radio.modem_dynamic_sar_state=close
+persist.radio.sar_sar_sensor=true
 
 # RIL
 DEVICE_PROVISIONED=1
@@ -89,6 +151,9 @@ ro.com.android.dataroaming=true
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
+
+# WiFi Display
+persist.sys.wfd.virtual=0
 
 # ZRAM writeback
 ro.zram.first_wb_delay_mins=180

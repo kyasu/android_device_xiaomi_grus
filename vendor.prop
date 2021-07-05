@@ -91,6 +91,10 @@ vendor.audio.tunnel.encode=false
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
+ro.vendor.audio.game.effect=true
+ro.vendor.audio.voice.volume.boost=manual
+vendor.audio.feature.compr_voip.enable=false
+vendor.voice.path.for.pcm.voip=false
 
 # Bluetooth
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
@@ -105,14 +109,26 @@ ro.charger.enable_suspend=true
 # CNE
 persist.vendor.cne.feature=1
 
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Display
+ro.surface_flinger.has_wide_color_display=true
+
 # Display post-processing
 ro.vendor.display.cabl=2
+vendor.display.enable_default_color_mode=1
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
+
+# Fingerprint
+persist.vendor.sys.fp.fod.location.X_Y=448,1938
+persist.vendor.sys.fp.fod.size.width_height=185,185
+ro.hardware.fp.fod=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -128,6 +144,18 @@ ro.opengles.version=196610
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# Listen
+vendor.audio.soundtrigger.phrase.adsp.level=40
+vendor.audio.soundtrigger.phrase.level=40
+vendor.audio.soundtrigger.training.level=50
+vendor.audio.soundtrigger.user.adsp.level=60
+vendor.audio.soundtrigger.user.level=60
+
+# NFC
+ro.hardware.nfc_nci=nqx.default
+ro.se.type=HCE,UICC
+ro.vendor.nfc.repair=1
 
 # Network manager
 persist.vendor.data.iwlan.enable=true
