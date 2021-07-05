@@ -1,4 +1,15 @@
-# Common proprietary files - from pyxis MIUI package V12.5.1.0.RFCCNXM china stable, unless pinned
+# Device proprietary files - from grus MIUI package V12.5.1.0.RFBMIXM global stable, unless pinned
+
+# ACDB
+vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
 # ADSP
 vendor/bin/adsprpcd
@@ -14,6 +25,21 @@ vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so
+vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
+vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
+vendor/lib/rfsa/adsp/libproxy_skel.so
+vendor/lib/rfsa/adsp/libVDHexagonSuperPhoto_skel.so
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_res.bin
 
 # Audio
 vendor/lib/libadm.so
@@ -26,6 +52,13 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
+vendor/lib/hw/audio.primary.sdm710.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+vendor/lib/libaudioroute_ext.so
 
 # Audio extensions
 vendor/lib/libcomprcapture.so
@@ -34,6 +67,12 @@ vendor/lib/libhdmiedid.so
 vendor/lib64/libcomprcapture.so
 vendor/lib64/libexthwplugin.so
 vendor/lib64/libhdmiedid.so
+vendor/lib/liba2dpoffload.so
+vendor/lib/libbatterylistener.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libhfp.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
 
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
@@ -44,11 +83,19 @@ vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libshoebox.so
 
+# Audio (speaker amplifier) firmware
+vendor/firmware/cs35l41-dsp1-diag.wmfw
+vendor/firmware/cs35l41-dsp1-spk-prot.bin
+vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
+
+# Audio (speaker amplifier) calibration
+vendor/etc/cirrus.cfg
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+#vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
@@ -75,6 +122,175 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 # Bluetooth (aptX) - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+
+# Camera
+vendor/lib/hw/camera.qcom.so
+vendor/lib/hw/com.qti.chi.override.so|30790a293658003bddbee235135bf7604e05ba02
+vendor/lib/libc++_shared.so
+vendor/lib/libcamera_nn_stub.so
+vendor/lib/libcamera_scene.so
+vendor/lib/libcamxfdalgov7.so
+vendor/lib/libcamxfdengine.so
+vendor/lib/libcamxstatscore.so
+vendor/lib/libcamxtintlessalgo.so
+vendor/lib/libcom.qti.chinodeutils.so
+vendor/lib/libFaceGrade.so
+vendor/lib/libmegface.so
+vendor/lib/libMegviiFacepp-0.5.2.so
+vendor/lib/libmialgo_fs.so
+vendor/lib/libmialgo_sd.so
+vendor/lib/libmibokeh_712.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc2.so
+vendor/lib/libmpbase.so
+vendor/lib/libnanopb.so
+vendor/lib/libSNPE.so
+vendor/lib/libswregistrationalgo.so
+vendor/lib/libsymphony-cpu.so
+vendor/lib/libsymphonypower.so
+vendor/lib/libVDClearShot.so
+vendor/lib/libVDSuperPhotoAPI.so
+vendor/lib/libvidhance.so
+vendor/lib/libXMFD_AgeGender.so
+vendor/lib/lib_denoiser3.so
+
+# Camera (Altek modules)
+vendor/lib/libalCFR.so
+vendor/lib/libalhLDC.so
+vendor/lib/libalLDC.so
+vendor/lib/libalRnBRT_GL_GBWRAPPER.so
+
+# Camera (Arcsoft modules)
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_bodyslim.so
+vendor/lib/libarcsoft_distortion_correction.so
+vendor/lib/libarcsoft_dualcam_image_optical_zoom.so
+vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
+vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libarcsoft_dualcam_refocus_front.so
+vendor/lib/libarcsoft_dualcam_refocus_rear_t.so
+vendor/lib/libarcsoft_dualcam_refocus_rear_w.so
+vendor/lib/libarcsoft_dualcam_video_optical_zoom.so
+vendor/lib/libarcsoft_high_dynamic_range.so
+vendor/lib/libarcsoft_low_light_hdr.so
+vendor/lib/libarcsoft_portrait_lighting.so
+vendor/lib/libarcsoft_portrait_lighting_c.so
+vendor/lib/libarcsoft_supernight.so
+
+# Camera (components)
+vendor/lib/camera/components/com.altek.node.depurple.so
+vendor/lib/camera/components/com.altek.node.distortioncorrection.so
+vendor/lib/camera/components/com.arcsoft.node.bodyslim.so
+vendor/lib/camera/components/com.arcsoft.node.capturebokeh.so
+vendor/lib/camera/components/com.arcsoft.node.capturefusion.so
+vendor/lib/camera/components/com.arcsoft.node.distortioncorrection.so
+vendor/lib/camera/components/com.arcsoft.node.hdr.so
+vendor/lib/camera/components/com.arcsoft.node.hdrchecker.so
+vendor/lib/camera/components/com.arcsoft.node.realtimebokeh.so
+vendor/lib/camera/components/com.arcsoft.node.skinbeautifier.so
+vendor/lib/camera/components/com.arcsoft.node.smoothtransition.so
+vendor/lib/camera/components/com.arcsoft.node.superlowlight.so
+vendor/lib/camera/components/com.mi.node.aiasd.so
+vendor/lib/camera/components/com.qti.eisv2.so
+vendor/lib/camera/components/com.qti.eisv3.so
+vendor/lib/camera/components/com.qti.hvx.addconstant.so
+vendor/lib/camera/components/com.qti.hvx.binning.so
+vendor/lib/camera/components/com.qti.node.dummyrtb.so
+vendor/lib/camera/components/com.qti.node.dummysat.so
+vendor/lib/camera/components/com.qti.node.eisv2.so
+vendor/lib/camera/components/com.qti.node.eisv3.so
+vendor/lib/camera/components/com.qti.node.gpu.so
+vendor/lib/camera/components/com.qti.node.memcpy.so
+vendor/lib/camera/components/com.qti.node.photosolid.so
+vendor/lib/camera/components/com.qti.node.remosaic.so
+vendor/lib/camera/components/com.qti.node.stich.so
+vendor/lib/camera/components/com.qti.node.swregistration.so
+vendor/lib/camera/components/com.qti.node.xiaomigenderage.so
+vendor/lib/camera/components/com.qtistatic.stats.aec.so
+vendor/lib/camera/components/com.qtistatic.stats.af.so
+vendor/lib/camera/components/com.qtistatic.stats.awb.so
+vendor/lib/camera/components/com.qtistatic.stats.pdlib.so
+vendor/lib/camera/components/com.qti.stats.aec.so
+vendor/lib/camera/components/com.qti.stats.afd.so
+vendor/lib/camera/components/com.qti.stats.af.so
+vendor/lib/camera/components/com.qti.stats.asd.so
+vendor/lib/camera/components/com.qti.stats.awb.so
+vendor/lib/camera/components/com.qti.stats.awbwrapper.so
+vendor/lib/camera/components/com.qti.stats.pdlib.so
+vendor/lib/camera/components/com.qti.stats.pdlibsony.so
+vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
+vendor/lib/camera/components/com.vidhance.node.eis.so
+vendor/lib/camera/components/com.vidhance.stats.aec_dmbr.so
+vendor/lib/camera/components/com.visidon.node.clearshot.so
+vendor/lib/camera/components/com.visidon.node.sr.so
+vendor/lib/camera/components/com.xiaomi.node.mibokeh.so
+vendor/lib/camera/components/com.xiaomi.node.mifragment.so
+vendor/lib/camera/components/com.xiaomi.node.misegment.so
+vendor/lib/camera/components/etc/morpho_lowlight4.0_adrc_high_1.xml
+vendor/lib/camera/components/etc/morpho_lowlight4.0_adrc_high.xml
+vendor/lib/camera/components/etc/morpho_lowlight4.0.xml
+vendor/lib/camera/components/etc/visidon_clearshot_params.xml
+
+# Camera (firmware)
+vendor/firmware/CAMERA_ICP.elf
+
+# Camera (misc)
+vendor/etc/camera/beauty_ui9_intelligent_params.config
+vendor/etc/camera/body_slim_ui9_params.config
+vendor/etc/camera/camxoverridesettings.txt
+vendor/etc/camera/CFR_para.bin
+vendor/etc/camera/eyelineblush.cng
+vendor/etc/camera/golden_rear_dc_cal_wu.bin
+vendor/etc/camera/GpuKernelRepo.pb
+vendor/etc/camera/LDC_packdata_xiaomi_F2_src1.dat
+vendor/etc/camera/LDC_packdata_xiaomi_F2_src2.dat
+vendor/etc/camera/lf_facerank_model.bin
+vendor/etc/camera/libalfpc_tuning.bin
+vendor/etc/camera/megviifacepp_0_5_2_model
+vendor/etc/camera/model_back.dlc
+vendor/etc/camera/model_front.dlc
+vendor/etc/camera/sceneDetection.xml
+vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
+vendor/etc/camera/visidon_clearshot_params_algoup.xml
+
+# Camera (Remosaic)
+vendor/bin/remosaic_daemon
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libremosaiclib.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaiclib.so
+
+# Camera (sensors)
+vendor/lib/camera/com.qti.sensor.imx586_grus.so
+vendor/lib/camera/com.qti.sensor.ov8856.so
+vendor/lib/camera/com.qti.sensor.s5k3l6.so
+vendor/lib/camera/com.qti.sensor.s5k3t1.so
+
+# Camera (sensors calibration)
+vendor/lib/camera/com.qti.sensormodule.imx586.bin
+vendor/lib/camera/com.qti.sensormodule.imx586_II.bin
+vendor/lib/camera/com.qti.sensormodule.ov8856.bin
+vendor/lib/camera/com.qti.sensormodule.ov8856_II.bin
+vendor/lib/camera/com.qti.sensormodule.s5k3l6.bin
+vendor/lib/camera/com.qti.sensormodule.s5k3l6_II.bin
+vendor/lib/camera/com.qti.sensormodule.s5k3t1.bin
+vendor/lib/camera/com.qti.sensormodule.s5k3t1_II.bin
+vendor/lib/camera/com.qti.sensormodule.s5k3t1_largan.bin
+vendor/lib/camera/com.qti.tuned.default.bin
+vendor/lib/camera/com.qti.tuned.grus_ofilm_imx586.bin
+vendor/lib/camera/com.qti.tuned.grus_ofilm_ov8856.bin
+vendor/lib/camera/com.qti.tuned.grus_ofilm_s5k3l6.bin
+vendor/lib/camera/com.qti.tuned.grus_ofilm_s5k3t1.bin
+vendor/lib/camera/com.qti.tuned.grus_sunny_imx586.bin
+vendor/lib/camera/com.qti.tuned.grus_sunny_ov8856.bin
+vendor/lib/camera/com.qti.tuned.grus_sunny_s5k3l6.bin
+vendor/lib/camera/com.qti.tuned.grus_sunny_s5k3t1.bin
+vendor/lib/camera/fdconfigpreview.bin
+vendor/lib/camera/fdconfigpreviewlite.bin
+vendor/lib/camera/fdconfigvideo.bin
+vendor/lib/camera/fdconfigvideolite.bin
+vendor/lib/camera/titan17x_usecases.bin
+vendor/lib/mibokeh_712_opencl.bin
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -182,6 +398,16 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
+# Display calibration
+vendor/etc/dsi_ss_ea8076_fhd_cmd_display_mi.xml
+
+# Display configs
+vendor/etc/hdr_config.cfg
+vendor/etc/sdr_config.cfg
+
+# Display firmware
+vendor/firmware/goodix_gt9886_limit_f2.tporder
+
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/mm-pp-dpps
@@ -257,6 +483,31 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
+# DRM (MTD)
+vendor/bin/mtd@1.2
+vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-service.rc
+vendor/lib64/libmfido.so
+vendor/lib64/libmt@1.2.so
+vendor/lib64/libwvkeybox.so
+vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.2.so
+
+# DRM (OEM Crypto API)
+#vendor/lib64/libcpion.so
+#vendor/lib64/libminkdescriptor.so
+#vendor/lib64/liboemcrypto.so
+#vendor/lib64/libtrustedapploader.so
+
+# DRM (Widevine) from grus - V12.0.4.0.QFBMIXM global
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+vendor/lib64/libhdcpsrm.so
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+
 # ESE
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
@@ -264,6 +515,19 @@ vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
+
+# Fingerprint
+vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.sdm710.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libhvx_proxy_stub.so
+
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib/libqcbor.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib64/libqcbor.so
 
 # GNSS / GPS
 vendor/bin/loc_launcher
@@ -438,6 +702,14 @@ vendor/firmware/ipa_fws.mdt
 # IRQ balance
 vendor/bin/msm_irqbalance
 
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
+
 # Listen
 vendor/lib/hw/sound_trigger.primary.sdm710.so
 vendor/lib/libadpcmdec.so
@@ -450,7 +722,7 @@ vendor/lib/libgcs.so
 vendor/lib/libjnihelper.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
-vendor/lib/librice.so
+#vendor/lib/librice.so
 vendor/lib/libsmwrapper.so
 vendor/lib64/hw/sound_trigger.primary.sdm710.so
 vendor/lib64/libcapiv2svacnn.so
@@ -462,7 +734,7 @@ vendor/lib64/libgcs.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
-vendor/lib64/librice.so
+#vendor/lib64/librice.so
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
@@ -485,6 +757,10 @@ vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
+
+# NFC
+vendor/firmware/libpn553_rec.so
+vendor/lib/libpn553_fw.so
 
 # OMX
 vendor/lib/libAlacSwDec.so
@@ -574,6 +850,9 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Power-off charging daemon
 system/bin/charger:system/bin/chargeonlymode
+
+# QDCM calibration data
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|2e4e25256396faf7a9060ffe203e94c04c5f8cd0
 
 # QMI
 system/etc/permissions/qti_libpermissions.xml:system_ext/etc/permissions/qti_libpermissions.xml
@@ -733,12 +1012,192 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
+# Secure element
+vendor/bin/hw/vendor.qti.secure_element@1.0-service
+vendor/etc/init/vendor.qti.secure_element@1.0-service.rc
+vendor/lib64/hw/android.hardware.secure_element@1.0-impl.so
+# Sensors
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/sensors.qti
+vendor/etc/elliptic_sensor.xml
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libminkdescriptor.so
+vendor/lib64/libnotifyaudiohal.so
+vendor/lib64/libsensorcal.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libssc.so
+vendor/lib64/libssc_default_listener.so
+vendor/lib64/libssccalapi.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/libultrasound.so
+vendor/lib64/sensors.elliptic.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/sensors.touch.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib/libminkdescriptor.so
+vendor/lib/libsensorcal.so
+vendor/lib/libsensorslog.so
+vendor/lib/libssc.so
+vendor/lib/libssc_default_listener.so
+vendor/lib/libssccalapi.so
+vendor/lib/libsns_device_mode_stub.so
+vendor/lib/libsns_fastRPC_util.so
+vendor/lib/libsns_low_lat_stream_stub.so
+vendor/lib/libsnsapi.so
+vendor/lib/libsnsdiaglog.so
+vendor/lib/libtrustedapploader.so
+vendor/lib/libultrasound.so
+vendor/lib/sensors.ssc.so
+vendor/lib/sensors.touch.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+
+# Sensors configs
+vendor/etc/sensors/config/adux1050_0.json
+vendor/etc/sensors/config/ak991x_dri_0.json
+vendor/etc/sensors/config/bmi160_0.json
+vendor/etc/sensors/config/cm3526_0.json
+vendor/etc/sensors/config/sdm670_adux1050_0.json
+vendor/etc/sensors/config/sdm670_ak991x_0.json
+vendor/etc/sensors/config/sdm670_bmi160_0-spi.json
+vendor/etc/sensors/config/sdm670_tcs3701.json
+vendor/etc/sensors/config/sns_amd.json
+vendor/etc/sensors/config/sns_aod.json
+vendor/etc/sensors/config/sns_basic_gestures.json
+vendor/etc/sensors/config/sns_bring_to_ear.json
+vendor/etc/sensors/config/sns_cm.json
+vendor/etc/sensors/config/sns_diag_filter.json
+vendor/etc/sensors/config/sns_distance_bound.json
+vendor/etc/sensors/config/sns_dpc.json
+vendor/etc/sensors/config/sns_facing.json
+vendor/etc/sensors/config/sns_fmv.json
+vendor/etc/sensors/config/sns_geomag_rv.json
+vendor/etc/sensors/config/sns_gyro_cal.json
+vendor/etc/sensors/config/sns_multishake.json
+vendor/etc/sensors/config/sns_pedometer.json
+vendor/etc/sensors/config/sns_rmd.json
+vendor/etc/sensors/config/sns_rotv.json
+vendor/etc/sensors/config/sns_smd.json
+vendor/etc/sensors/config/tcs3701.json
+vendor/etc/sensors/proto/descriptor.proto
+vendor/etc/sensors/proto/nanopb.proto
+vendor/etc/sensors/proto/qti_gravity.proto
+vendor/etc/sensors/proto/sns_accel.proto
+vendor/etc/sensors/proto/sns_accel_cal.proto
+vendor/etc/sensors/proto/sns_activity_recognition.proto
+vendor/etc/sensors/proto/sns_ambient_light.proto
+vendor/etc/sensors/proto/sns_ambient_temperature.proto
+vendor/etc/sensors/proto/sns_amd.proto
+vendor/etc/sensors/proto/sns_aont.proto
+vendor/etc/sensors/proto/sns_async_com_port.proto
+vendor/etc/sensors/proto/sns_basic_gestures.proto
+vendor/etc/sensors/proto/sns_bring_to_ear.proto
+vendor/etc/sensors/proto/sns_cal.proto
+vendor/etc/sensors/proto/sns_ccd_ttw.proto
+vendor/etc/sensors/proto/sns_ccd_walk.proto
+vendor/etc/sensors/proto/sns_cct.proto
+vendor/etc/sensors/proto/sns_client.proto
+vendor/etc/sensors/proto/sns_cmc.proto
+vendor/etc/sensors/proto/sns_cmd.proto
+vendor/etc/sensors/proto/sns_da_test.proto
+vendor/etc/sensors/proto/sns_dae.proto
+vendor/etc/sensors/proto/sns_data_acquisition_engine.proto
+vendor/etc/sensors/proto/sns_device_mode.proto
+vendor/etc/sensors/proto/sns_device_orient.proto
+vendor/etc/sensors/proto/sns_diag.proto
+vendor/etc/sensors/proto/sns_diag_sensor.proto
+vendor/etc/sensors/proto/sns_distance_bound.proto
+vendor/etc/sensors/proto/sns_dpc.proto
+vendor/etc/sensors/proto/sns_ext_svc.proto
+vendor/etc/sensors/proto/sns_facing.proto
+vendor/etc/sensors/proto/sns_flicker.proto
+vendor/etc/sensors/proto/sns_fmv.proto
+vendor/etc/sensors/proto/sns_formatter.proto
+vendor/etc/sensors/proto/sns_free_fall.proto
+vendor/etc/sensors/proto/sns_fw.proto
+vendor/etc/sensors/proto/sns_game_rv.proto
+vendor/etc/sensors/proto/sns_geomag_rv.proto
+vendor/etc/sensors/proto/sns_gravity.proto
+vendor/etc/sensors/proto/sns_gyro.proto
+vendor/etc/sensors/proto/sns_gyro_cal.proto
+vendor/etc/sensors/proto/sns_gyro_rot_matrix.proto
+vendor/etc/sensors/proto/sns_hall.proto
+vendor/etc/sensors/proto/sns_har.proto
+vendor/etc/sensors/proto/sns_heart_beat.proto
+vendor/etc/sensors/proto/sns_heart_rate.proto
+vendor/etc/sensors/proto/sns_hinge_angle.proto
+vendor/etc/sensors/proto/sns_humidity.proto
+vendor/etc/sensors/proto/sns_interrupt.proto
+vendor/etc/sensors/proto/sns_mag.proto
+vendor/etc/sensors/proto/sns_mag_cal.proto
+vendor/etc/sensors/proto/sns_mcmd.proto
+vendor/etc/sensors/proto/sns_motion_detect.proto
+vendor/etc/sensors/proto/sns_multishake.proto
+vendor/etc/sensors/proto/sns_oem1.proto
+vendor/etc/sensors/proto/sns_oem2.proto
+vendor/etc/sensors/proto/sns_oem3.proto
+vendor/etc/sensors/proto/sns_offbody_detect.proto
+vendor/etc/sensors/proto/sns_pedometer.proto
+vendor/etc/sensors/proto/sns_pedometer_wrist.proto
+vendor/etc/sensors/proto/sns_physical_sensor_oem_config.proto
+vendor/etc/sensors/proto/sns_physical_sensor_test.proto
+vendor/etc/sensors/proto/sns_pose_6dof.proto
+vendor/etc/sensors/proto/sns_ppg.proto
+vendor/etc/sensors/proto/sns_pressure.proto
+vendor/etc/sensors/proto/sns_proximity.proto
+vendor/etc/sensors/proto/sns_psmd.proto
+vendor/etc/sensors/proto/sns_registry.proto
+vendor/etc/sensors/proto/sns_remote_proc_state.proto
+vendor/etc/sensors/proto/sns_resampler.proto
+vendor/etc/sensors/proto/sns_rgb.proto
+vendor/etc/sensors/proto/sns_rmd.proto
+vendor/etc/sensors/proto/sns_rotv.proto
+vendor/etc/sensors/proto/sns_sar.proto
+vendor/etc/sensors/proto/sns_sensor_temperature.proto
+vendor/etc/sensors/proto/sns_sig_motion.proto
+vendor/etc/sensors/proto/sns_signal_sensor.proto
+vendor/etc/sensors/proto/sns_sim.proto
+vendor/etc/sensors/proto/sns_sim_legacy.proto
+vendor/etc/sensors/proto/sns_std.proto
+vendor/etc/sensors/proto/sns_std_event_gated_sensor.proto
+vendor/etc/sensors/proto/sns_std_sensor.proto
+vendor/etc/sensors/proto/sns_std_type.proto
+vendor/etc/sensors/proto/sns_step_detect.proto
+vendor/etc/sensors/proto/sns_suid.proto
+vendor/etc/sensors/proto/sns_thermopile.proto
+vendor/etc/sensors/proto/sns_threshold.proto
+vendor/etc/sensors/proto/sns_tilt.proto
+vendor/etc/sensors/proto/sns_tilt_to_wake.proto
+vendor/etc/sensors/proto/sns_timer.proto
+vendor/etc/sensors/proto/sns_ultra_violet.proto
+vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
+vendor/etc/sensors/sns_reg_config
+
 # Soter
 -system/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Thermal configs
+vendor/etc/thermal-engine-sdm710-camera.conf
+vendor/etc/thermal-engine-sdm710-high.conf
+vendor/etc/thermal-engine-sdm710-map.conf
+vendor/etc/thermal-engine-sdm710-nolimits.conf
+vendor/etc/thermal-engine-sdm710-phone.conf
+vendor/etc/thermal-engine-sdm710-pubgmhd.conf
+vendor/etc/thermal-engine-sdm710-sgame.conf
+vendor/etc/thermal-engine-sdm710-tgame.conf
+vendor/etc/thermal-engine-sdm710.conf
+vendor/etc/thermal-engine.conf
 
 # Thermal engine
 vendor/bin/thermal-engine
