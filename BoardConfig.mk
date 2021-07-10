@@ -28,7 +28,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := dipper
+TARGET_OTA_ASSERT_DEVICE := grus
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm710
@@ -45,7 +45,7 @@ TARGET_KERNEL_ARCH := arm64
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm710
-  TARGET_KERNEL_CONFIG := dipper_defconfig
+  TARGET_KERNEL_CONFIG := grus_defconfig
 endif
 
 # Platform
