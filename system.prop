@@ -22,10 +22,18 @@ vendor.bluetooth.soc=cherokee
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
+persist.camera.sat.fallback.dist=45
+persist.camera.sat.fallback.dist.d=5
+persist.camera.sat.fallback.luxindex=405
+persist.camera.sat.fallback.lux.d=20
+
 # Data modules
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
+
+# Display
+ro.surface_flinger.has_wide_color_display=true
 
 # Display post-processing
 ro.qualcomm.cabl=0
