@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/grus/grus-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -151,12 +151,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sdm845 \
-    hwcomposer.sdm845 \
+    gralloc.sdm710 \
+    hwcomposer.sdm710 \
     libdisplayconfig.qti \
     libqdMetaData \
     libtinyxml \
-    memtrack.sdm845 \
+    memtrack.sdm710 \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.allocator@1.0-service
@@ -195,7 +195,7 @@ PRODUCT_BOOT_JARS += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/sdm845-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm845-tavil-snd-card_Button_Jack.kl
+    $(LOCAL_PATH)/keylayout/grus-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/grus-tavil-snd-card_Button_Jack.kl
 
 # IPA
 PRODUCT_PACKAGES += \
@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sdm845
+    android.hardware.light@2.0-service.xiaomi_grus
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
