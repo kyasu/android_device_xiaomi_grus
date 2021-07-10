@@ -20,7 +20,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/grus/grus-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2248
+TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Component overrides
