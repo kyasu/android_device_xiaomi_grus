@@ -22,12 +22,15 @@ import android.util.Log;
 public final class DiracUtils {
 
     protected static DiracSound mDiracSound;
+    private static boolean mInitialized;
     private static final String TAG = "DiracUtils";
     private static final boolean DEBUG = true;
 
     public static void initialize() {
-        if (mDiracSound == null)
+        if (!mInitialized) {
             mDiracSound = new DiracSound(0, 0);
+            mInitialized = true;
+        }
     }
 
     protected static void setMusic(boolean enable) {
