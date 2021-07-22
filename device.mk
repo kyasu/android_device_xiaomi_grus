@@ -231,6 +231,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor:64 \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
 
@@ -306,8 +308,8 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # IRQ
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # IRSC
 PRODUCT_COPY_FILES += \
