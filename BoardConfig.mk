@@ -99,10 +99,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_grus
-TARGET_RECOVERY_DEVICE_MODULES := libinit_grus
-
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
@@ -160,11 +156,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-
-# Symlinks
-#BOARD_ROOT_EXTRA_SYMLINKS += \
-#    /data/tombstones:/tombstones \
-#    /mnt/vendor/persist:/persist
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
