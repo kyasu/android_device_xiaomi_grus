@@ -162,9 +162,9 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Symlinks
-BOARD_ROOT_EXTRA_SYMLINKS += \
-    /data/tombstones:/tombstones \
-    /mnt/vendor/persist:/persist
+#BOARD_ROOT_EXTRA_SYMLINKS += \
+#    /data/tombstones:/tombstones \
+#    /mnt/vendor/persist:/persist
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

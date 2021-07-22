@@ -91,19 +91,19 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[vendor/bt_firmware/]
+[bt_firmware/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[persist]
+[persist/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[vendor/dsp/]
+[dsp/]
 mode: 0771
 user: AID_MEDIA
 group: AID_MEDIA
