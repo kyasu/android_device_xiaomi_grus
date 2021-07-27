@@ -1,0 +1,2 @@
+allow hvdcp sysfs_wireless_supply:dir search;
+allow hvdcp sysfs_wireless_supply:file r_file_perms;
