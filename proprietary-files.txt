@@ -1216,6 +1216,7 @@ vendor/etc/thermal-engine.conf
 
 # Thermal engine
 vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
