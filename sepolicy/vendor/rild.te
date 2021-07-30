@@ -1,4 +1,10 @@
 dontaudit rild tombstone_data_file:dir search;
 dontaudit rild vendor_file:file ioctl;
 
+#allow rild default_prop:file { getattr open read };
+
+allow rild vendor_data_file:dir w_dir_perms;
+allow rild vendor_data_file:file create_file_perms;
+
+get_prop(rild, vendor_audio_prop)
 set_prop(rild, deviceid_prop)
