@@ -22,4 +22,6 @@ allow vendor_init vendor_fp_prop:property_service set;
 allow vendor_init proc_sysctl_autogroup:file w_file_perms;
 allow vendor_init proc_sysctl_schedboost:file w_file_perms;
 
+get_prop(vendor_init, persist_debug_prop);
+set_prop(vendor_init, freq_prop)
 set_prop(vendor_init, vendor_power_prop)
