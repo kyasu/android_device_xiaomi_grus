@@ -12,9 +12,38 @@ add_hwservice(hal_mtdservice_server, hal_mtdservice_hwservice)
 allow hal_mtdservice_client hal_mtdservice_hwservice:hwservice_manager find;
 
 allow hal_mtdservice_default ion_device:chr_file r_file_perms;
-allow hal_mtdservice_default mnt_vendor_file:dir r_dir_perms;
 allow hal_mtdservice_default persist_drm_file:dir create_dir_perms;
 allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
+
+allow hal_mtdservice_default mnt_vendor_file:dir r_dir_perms;
+allow hal_mtdservice_default mnt_vendor_file:file r_file_perms;
+allow hal_mtdservice_default persist_alarm_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_alarm_file:file r_file_perms;
+allow hal_mtdservice_default persist_audio_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_audio_file:file r_file_perms;
+allow hal_mtdservice_default persist_bluetooth_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_bluetooth_file:file r_file_perms;
+allow hal_mtdservice_default persist_camera_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_camera_file:file r_file_perms;
+allow hal_mtdservice_default persist_display_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_display_file:file r_file_perms;
+allow hal_mtdservice_default persist_hvdcp_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_hvdcp_file:file r_file_perms;
+allow hal_mtdservice_default persist_misc_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_misc_file:file r_file_perms;
+allow hal_mtdservice_default persist_rfs_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_rfs_file:file r_file_perms;
+allow hal_mtdservice_default persist_rfs_shared_hlos_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_secnvm_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_secnvm_file:file r_file_perms;
+allow hal_mtdservice_default persist_time_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_time_file:file r_file_perms;
+allow hal_mtdservice_default persist_vpp_file:dir r_dir_perms;
+allow hal_mtdservice_default persist_vpp_file:file r_file_perms;
+
+allow hal_mtdservice_default sensors_persist_file:dir r_dir_perms;
+allow hal_mtdservice_default sensors_persist_file:file r_file_perms;
+allow hal_mtdservice_default sensors_persist_file:fifo_file r_file_perms;
 
 set_prop(hal_mtdservice_default, vendor_tee_listener_prop)
 
