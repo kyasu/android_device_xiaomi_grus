@@ -22,4 +22,6 @@ userdebug_or_eng(`
   get_prop(hal_camera_default, sensors_dbg_prop)
 ')
 
+allow hal_camera_default sensors_prop:file read;
+
 dontaudit hal_camera_default property_type:file { getattr open };
