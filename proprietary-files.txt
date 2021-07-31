@@ -500,9 +500,9 @@ vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.2.so
 #vendor/lib64/liboemcrypto.so
 #vendor/lib64/libtrustedapploader.so
 
-# DRM (Widevine) from grus - V12.0.4.0.QFBMIXM global
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+# DRM (Widevine)
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvhidl.so
