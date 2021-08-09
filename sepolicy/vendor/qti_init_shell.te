@@ -7,4 +7,6 @@ allow qti_init_shell configfs:lnk_file create;
 allow qti_init_shell sysfs:file setattr;
 allow qti_init_shell sysfs_leds:file setattr;
 
+allow qti_init_shell sensors_persist_file:fifo_file { getattr setattr };
+
 allow qti_init_shell self:capability kill;
