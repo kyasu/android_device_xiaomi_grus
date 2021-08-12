@@ -996,7 +996,4 @@
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
 
-    <!-- Shows the required view for in-display fingerprint -->
-    <bool name="config_supportsInDisplayFingerprint">true</bool>
-
 </resources>
