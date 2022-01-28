@@ -33,6 +33,9 @@ function blob_fixup() {
             ${PATCHELF} --remove-needed vendor.qti.hardware.display.mapper@2.0.so "${2}"
             ${PATCHELF} --remove-needed vendor.qti.hardware.display.mapper@3.0.so "${2}"
             ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            ${PATCHELF} --add-needed "lib-imsvtshim.so" "${2}"
+            ;;
     esac
 }
 
