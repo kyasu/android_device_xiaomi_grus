@@ -6,7 +6,9 @@ cc_library_static {
     srcs: ["init_grus.cpp"],
     recovery_available: true,
     include_dirs: [
-        "system/libbase/include",
         "system/core/init"
+    ],
+    shared_libs: [
+        "libbase"
     ]
 }
