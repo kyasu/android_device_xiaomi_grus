@@ -1,4 +1,4 @@
-// Copyright (C) 2021 KudProject Development
+// Copyright (C) 2021-2022 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 
 cc_library_static {
@@ -6,7 +6,7 @@ cc_library_static {
     srcs: ["init_grus.cpp"],
     recovery_available: true,
     include_dirs: [
-        "system/core/base/include",
+        "system/libbase/include",
         "system/core/init"
     ]
 }
