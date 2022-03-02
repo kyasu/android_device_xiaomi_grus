@@ -191,6 +191,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 persist.vendor.radio.enableadvancedscan=false
 
 # USB
+vendor.usb.product_string=Xiaomi Mi 9 SE
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss
