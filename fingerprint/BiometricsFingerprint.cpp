@@ -193,11 +193,15 @@ Return<uint64_t> BiometricsFingerprint::preEnroll() {
 
 Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
                                                     uint32_t gid, uint32_t timeoutSec) {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_ON);
+    extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     const hw_auth_token_t* authToken = reinterpret_cast<const hw_auth_token_t*>(hat.data());
     return ErrorFilter(mDevice->enroll(mDevice, authToken, gid, timeoutSec));
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return ErrorFilter(mDevice->post_enroll(mDevice));
 }
 
@@ -206,6 +210,8 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -237,6 +243,8 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 }
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId, uint32_t gid) {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
@@ -386,6 +394,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
                          .isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
                 }
+                getInstance()->onFingerUp();
             } else {
                 // Not a recognized fingerprint
                 if (!thisPtr->mClientCallback
