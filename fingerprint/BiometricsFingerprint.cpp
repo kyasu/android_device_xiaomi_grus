@@ -19,12 +19,36 @@
 
 #include "BiometricsFingerprint.h"
 
+#include <android-base/properties.h>
 #include <android-base/strings.h>
 #include <cutils/properties.h>
 #include <hardware/hardware.h>
 #include <hardware/hw_auth_token.h>
+#include <fstream>
 #include <inttypes.h>
 #include <unistd.h>
+
+#define COMMAND_NIT 10
+#define PARAM_NIT_630_FOD 1
+#define PARAM_NIT_NONE 0
+
+#define DISPPARAM_PATH "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
+#define DISPPARAM_HBM_FOD_ON "0x20000"
+#define DISPPARAM_HBM_FOD_OFF "0xE0000"
+
+#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
+#define FOD_STATUS_ON 1
+#define FOD_STATUS_OFF 0
+
+namespace {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+}  // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -391,15 +415,22 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
 }
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
-    return false;
+    std::string device = android::base::GetProperty("ro.product.device", "");
+    return device == "grus";
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,
                                                 float /* minor */, float /* major */) {
+    set(FOD_STATUS_PATH, FOD_STATUS_ON);
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_ON);
+    extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    extCmd(COMMAND_NIT, PARAM_NIT_NONE);
+    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     return Void();
 }
 
