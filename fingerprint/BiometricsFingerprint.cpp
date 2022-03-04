@@ -19,7 +19,6 @@
 
 #include "BiometricsFingerprint.h"
 
-#include <android-base/properties.h>
 #include <android-base/strings.h>
 #include <cutils/properties.h>
 #include <hardware/hardware.h>
@@ -295,15 +294,12 @@ fingerprint_device_t* getDeviceForVendor(const char* class_name) {
 
 fingerprint_device_t* getFingerprintDevice() {
     fingerprint_device_t* fp_device;
-    std::string vendor_modules[] = {"fpc", "goodix", "goodix_fod"};
 
-    for (const auto& vendor : vendor_modules) {
-        if ((fp_device = getDeviceForVendor(vendor.c_str())) == nullptr) {
-            ALOGE("Failed to load %s fingerprint module", vendor.c_str());
-            continue;
-        }
-
-        setFpVendorProp(vendor.c_str());
+    fp_device = getDeviceForVendor("goodix_fod");
+    if (fp_device == nullptr) {
+        ALOGE("Failed to load goodix_fod fingerprint module");
+    } else {
+        setFpVendorProp("goodix_fod");
         return fp_device;
     }
 
@@ -415,8 +411,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
 }
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
-    std::string device = android::base::GetProperty("ro.product.device", "");
-    return device == "grus";
+    return true;
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,

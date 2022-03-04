@@ -19,7 +19,6 @@
 #include <fstream>
 
 #include <android-base/logging.h>
-#include <android-base/properties.h>
 #include <android-base/strings.h>
 #include <utils/Errors.h>
 
@@ -42,13 +41,11 @@ static constexpr const char* kDispParamHbmFodOff = "0xE0000";
 static constexpr const char* kDispParamHbmFodOn = "0x20000";
 
 bool hasAmoledPanel() {
-    std::string device = android::base::GetProperty("ro.product.device", "");
-    return device == "grus";
+    return true;
 }
 
 bool hasFingerprintOnDisplay() {
-    std::string device = android::base::GetProperty("ro.product.device", "");
-    return device == "grus";
+    return true;
 }
 
 bool SunlightEnhancement::isSupported() {
