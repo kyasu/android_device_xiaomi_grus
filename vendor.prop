@@ -137,8 +137,12 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Graphics
 debug.egl.hw=0
 debug.sf.hw=0
+debug.hwui.renderer=skiavk
+graphics.gpu.profiler.support=true
+renderthread.skia.reduceopstasksplitting=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+ro.hwui.use_vulkan=true
 ro.opengles.version=196610
 
 # IMS
