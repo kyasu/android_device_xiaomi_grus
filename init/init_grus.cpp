@@ -1,4 +1,4 @@
-// Copyright (C) 2021 KudProject Development
+// Copyright (C) 2021-2022 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 
 #include <cstdio>
@@ -39,18 +39,8 @@ void property_override_multiple(std::string type, char const value[])
 
 void vendor_load_properties()
 {
-    std::string region = android::base::GetProperty("ro.boot.hwc", "");
-    char const *desc, *model;
-
-    if (region == "CN") {
-        desc = "grus-user 11 RKQ1.200826.002 V12.5.1.0.RFBCNXM release-keys";
-        model = "MI 9 SE";
-    } else if (region == "GLOBAL") {
-        desc = "grus-user 11 RKQ1.200826.002 V12.5.1.0.RFBMIXM release-keys";
-        model = "Mi 9 SE";
-    }
-
-    property_override("ro.build.description", desc);
-    property_override_multiple("model", model);
     property_override_multiple("name", "grus");
+    property_override_multiple("model", "Mi 9 SE");
+    property_override("ro.build.description",
+        "grus-user 11 RKQ1.200826.002 V12.5.1.0.RFBMIXM release-keys");
 }
