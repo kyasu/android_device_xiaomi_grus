@@ -1,3 +1,5 @@
 allow sensors proc_tp:file r_file_perms;
 
 allow sensors sensors_vendor_data_file:fifo_file create_file_perms;
+
+get_prop(sensors, sensors_prop)

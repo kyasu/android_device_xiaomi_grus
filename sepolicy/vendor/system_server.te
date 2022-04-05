@@ -1,1 +1,3 @@
 binder_call(system_server, glgps)
+
+allow system_server app_zygote:process getpgid;
