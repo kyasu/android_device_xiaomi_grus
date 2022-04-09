@@ -10,6 +10,9 @@ on boot
     chmod 0644 /sys/class/drm/card0-DSI-1/disp_param
     chown system system /sys/class/drm/card0-DSI-1/panel_info
     chmod 0644 /sys/class/drm/card0-DSI-1/panel_info
+    chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
+    chmod 0644 /sys/class/drm/card0-DSI-1/fod_ui_ready
+
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
     write /sys/devices/virtual/touch/tp_dev/fod_status 1
