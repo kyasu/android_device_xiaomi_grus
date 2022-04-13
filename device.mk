@@ -90,10 +90,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_USE_VNDK_OVERRIDE := true
 
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl:32 \
