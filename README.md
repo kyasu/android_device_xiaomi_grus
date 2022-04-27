@@ -1,8 +1,3 @@
-Copyright (C) 2021 The LineageOS Project
-
-Device configuration for Xiaomi Mi 9 SE
-=========================================
-
 The Xiaomi Mi 9 SE (codenamed _"grus"_) is a middle-ranged smartphone from Xiaomi.
 
 It was announced in Febraury 2019. Release date was March 2019.
@@ -24,3 +19,20 @@ Rear Camera  | 48 MP (wide) + 13 MP (ultrawide) + 8 MP (portrait), PDAF, dual-LE
 ## Device picture
 
 ![Xiaomi Mi 9 SE](https://vovomobiles.com/wp-content/uploads/2019/12/Xiaomi-Mi-9-SE-1.png "Xiaomi Mi 9 SE in Piano Black")
+
+***
+
+## For building LineageOS 19
+Create '.repo/local_manifests/roomservice.xml' with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" />
+
+  <project name="kyasu/android_kernel_xiaomi_sdm710" path="kernel/xiaomi/sdm710" remote="github" />
+  <project name="kyasu/android_device_xiaomi_grus" path="device/xiaomi/grus" remote="github" />
+  <project name="kyasu/android_vendor_xiaomi_grus" path="vendor/xiaomi/grus" remote="github" />
+
+</manifest>
+```
