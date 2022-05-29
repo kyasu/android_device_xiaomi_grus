@@ -55,7 +55,7 @@
 /dev/lirc[0-9]*         u:object_r:lirc_device:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_grus                     u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi                          u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_grus                                       u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_grus                                   u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi                                               u:object_r:hal_ir_default_exec:s0

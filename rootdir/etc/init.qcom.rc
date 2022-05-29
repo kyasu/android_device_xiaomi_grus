@@ -260,6 +260,20 @@ on boot
     mkdir /data/vendor/sensors
     chown system system /data/vendor/sensors
 
+    # Fingerprint
+    chmod 0666 /dev/input/event2
+
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0644 /sys/class/drm/card0-DSI-1/disp_param
+    chown system system /sys/class/drm/card0-DSI-1/panel_info
+    chmod 0644 /sys/class/drm/card0-DSI-1/panel_info
+    chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
+    chmod 0644 /sys/class/drm/card0-DSI-1/fod_ui_ready
+
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_status
+    chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
+    write /sys/devices/virtual/touch/tp_dev/fod_status 1
+
 # MSM specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/diag 2771 root log
@@ -419,6 +433,11 @@ on post-fs-data
 
     # Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
+
+    # Create dir for fingerprint
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /data/vendor/goodix/gf_data/authenticate 0770 system system
+    mkdir /data/vendor/goodix/gf_data/enroll 0770 system system
 
     # Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
