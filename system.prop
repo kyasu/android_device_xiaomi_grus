@@ -21,7 +21,6 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
 camera.disable_zsl_mode=true
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 persist.camera.cfa.thres.front=0
 persist.camera.cfa.thres.rear=200
