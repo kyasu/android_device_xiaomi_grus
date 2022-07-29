@@ -57,11 +57,10 @@ int open_ts_input() {
 }  // anonymous namespace
 
 namespace aidl {
-namespace google {
+namespace android {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
 
 static constexpr int kInputEventWakeupModeOff = 4;
 static constexpr int kInputEventWakeupModeOn = 5;
@@ -100,9 +99,8 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     }
 }
 
-}  // namespace pixel
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace android
 }  // namespace aidl
