@@ -214,7 +214,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libtinyxml \
     libtinyxml.vendor \
-    libvulkan \
     memtrack.sdm710 \
     vendor.display.config@2.0.vendor \
     vendor.display.config@2.0 \
