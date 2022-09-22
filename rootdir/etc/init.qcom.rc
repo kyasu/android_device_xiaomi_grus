@@ -272,7 +272,6 @@ on boot
 
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
-    write /sys/devices/virtual/touch/tp_dev/fod_status 1
 
 # MSM specific files that need to be created on /data
 on post-fs-data

@@ -20,6 +20,8 @@
 
 #define FOD_UI_PATH "/sys/class/drm/card0-DSI-1/fod_ui_ready"
 
+#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
+
 static bool readBool(int fd) {
     char c;
     int rc;
@@ -58,6 +60,8 @@ class XiaomiGrusUdfpsHander : public UdfpsHandler {
                     .revents = 0,
             };
 
+            int status_fd = open(FOD_STATUS_PATH, O_RDWR);
+
             while (true) {
                 int rc = poll(&fodUiPoll, 1, -1);
                 if (rc < 0) {
@@ -65,8 +69,14 @@ class XiaomiGrusUdfpsHander : public UdfpsHandler {
                     continue;
                 }
 
+                bool fodUi = readBool(fd);
+
                 mDevice->extCmd(mDevice, COMMAND_NIT,
-                                readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                                fodUi ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+
+                if (status_fd >= 0) {
+                    write(status_fd, fodUi ? "1" : "0", 1);
+                }
             }
         }).detach();
     }
