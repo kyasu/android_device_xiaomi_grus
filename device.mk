@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3.vendor \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor:64 \
     libudfpshandler \
+    sensors.udfps \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor
 
