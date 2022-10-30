@@ -18,21 +18,21 @@ Rear Camera  | 48 MP (wide) + 13 MP (ultrawide) + 8 MP (portrait), PDAF, dual-LE
 
 ## Device picture
 
-![Xiaomi Mi 9 SE](https://vovomobiles.com/wp-content/uploads/2019/12/Xiaomi-Mi-9-SE-1.png "Xiaomi Mi 9 SE in Piano Black")
+![Xiaomi Mi 9 SE](https://wiki.lineageos.org/images/devices/grus.png "Xiaomi Mi 9 SE")
 
 ***
 
-## For building LineageOS 19
+## For building LineageOS 20
 Create '.repo/local_manifests/roomservice.xml' with the following content:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" />
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-20" />
 
-  <project name="kyasu/android_kernel_xiaomi_sdm710" path="kernel/xiaomi/sdm710" remote="github" />
-  <project name="kyasu/android_device_xiaomi_grus" path="device/xiaomi/grus" remote="github" />
-  <project name="kyasu/android_vendor_xiaomi_grus" path="vendor/xiaomi/grus" remote="github" />
+  <project name="kyasu/android_kernel_xiaomi_sdm710" path="kernel/xiaomi/sdm710" remote="github" revision="lineage-20" />
+  <project name="kyasu/android_device_xiaomi_grus" path="device/xiaomi/grus" remote="github" revision="lineage-20" />
+  <project name="kyasu/android_vendor_xiaomi_grus" path="vendor/xiaomi/grus" remote="github" revision="lineage-20" />
 
 </manifest>
 ```
