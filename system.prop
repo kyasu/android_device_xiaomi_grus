@@ -95,9 +95,14 @@ persist.rcs.supported=0
 # RIL
 DEVICE_PROVISIONED=1
 persist.radio.NO_STAPA=1
+persist.radio.VT_CAM_INTERFACE=1
+persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.apm_sim_not_pwdn=1
+persist.radio.charge_sar_control=false
 persist.radio.dynamic_sar=false
+persist.radio.modem_dynamic_sar_state=close
 persist.radio.multisim.config=dsds
+persist.radio.sar_sar_sensor=true
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
