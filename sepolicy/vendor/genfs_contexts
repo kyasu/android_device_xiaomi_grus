@@ -29,8 +29,3 @@ genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw                         u
 genfscon sysfs /devices/virtual/touch/tp_dev/fod_status                        u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /power/rpmh_stats/master_stats                                  u:object_r:sysfs_rpm:s0
 genfscon sysfs /power/system_sleep/stats                                       u:object_r:sysfs_system_sleep_stats:s0
-
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon              u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon               u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/extcon              u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,usb-pdphy@1700/extcon         u:object_r:sysfs_extcon:s0
