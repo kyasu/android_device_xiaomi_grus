@@ -81,6 +81,7 @@ static void workaround_snet_properties() {
 
 void vendor_load_properties()
 {
+    /*
     property_override_multiple("name", "grus");
     property_override_multiple("model", "Mi 9 SE");
     property_override("ro.build.description",
@@ -88,6 +89,7 @@ void vendor_load_properties()
     property_override("ro.build.fingerprint",
         "Xiaomi/grus/grus:11/RKQ1.200826.002/V12.5.1.0.RFBMIXM:user/release-keys");
     property_override("ro.build.version.security_patch", "2021-04-01");
+    */
 
     /* for HD on Amazon Prime Video
     property_override_multiple("model", "Mi 10");
