@@ -145,14 +145,6 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
-# Symlinks
-BOARD_ROOT_EXTRA_SYMLINKS += \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware \
-    /vendor/bt_firmware:/bt_firmware \
-    /mnt/vendor/persist:/persist \
-    /data/tombstones:/tombstones
-
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
