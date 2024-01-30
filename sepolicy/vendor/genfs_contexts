@@ -3,12 +3,6 @@ genfscon proc /sys/kernel/sched_boost                 u:object_r:proc_sysctl_sch
 genfscon proc /tp_fw_version       u:object_r:proc_tp:s0
 genfscon proc /tp_lockdown_info    u:object_r:proc_tp:s0
 
-genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys5/restart_level    u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/62400000.qcom,lpass/subsys3/restart_level u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys4/restart_level u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/aae0000.qcom,venus/subsys1/restart_level  u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys0/restart_level    u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys2/restart_level   u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-0/0-004b/name              u:object_r:sysfs_wireless_supply:s0
 genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-0/0-004b/power_supply/parallel  u:object_r:sysfs_wireless_supply:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state          u:object_r:sysfs_graphics:s0
