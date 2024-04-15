@@ -462,6 +462,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.qccvndhal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQccvndhal</name>
+            <instance>qccvndhal</instance>
+        </interface>
+        <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
