@@ -6,5 +6,3 @@ vendor_internal_prop(thermal_engine_prop)
 vendor_internal_prop(vendor_dpps_prop)
 
 vendor_public_prop(vendor_fp_prop)
-
-vendor_internal_prop(vendor_power_prop)

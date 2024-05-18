@@ -12,8 +12,8 @@ allow hal_fingerprint_default input_device:chr_file rw_file_perms;
 allow hal_fingerprint_default qdsp_device:chr_file rw_file_perms;
 allow hal_fingerprint_default xdsp_device:chr_file r_file_perms;
 
-allow hal_fingerprint_default sysfs_msm_subsys:dir search;
-allow hal_fingerprint_default sysfs_msm_subsys:file r_file_perms;
+allow hal_fingerprint_default sysfs_graphics:dir search;
+allow hal_fingerprint_default sysfs_graphics:file rw_file_perms;
 
 get_prop(hal_fingerprint_default, adsprpc_prop)
 set_prop(hal_fingerprint_default, vendor_fp_prop)
