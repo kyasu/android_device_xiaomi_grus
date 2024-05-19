@@ -15,8 +15,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_grus.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_grus-user \
-    lineage_grus-userdebug \
-    lineage_grus-eng
