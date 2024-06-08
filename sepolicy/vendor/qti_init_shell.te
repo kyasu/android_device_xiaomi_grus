@@ -13,6 +13,5 @@ allow qti_init_shell vendor_fp_prop:property_service set;
 
 allow qti_init_shell self:capability kill;
 
-allow qti_init_shell proc_sysctl_schedboost:file rw_file_perms;
 allow qti_init_shell proc_watermark_scale_factor:file rw_file_perms;
 allow qti_init_shell sensors_vendor_data_file:dir r_dir_perms;
