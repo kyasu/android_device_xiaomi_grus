@@ -415,7 +415,6 @@ PRODUCT_COPY_FILES += \
 
 # Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0-service \
     SecureElement
 
 PRODUCT_COPY_FILES += \
