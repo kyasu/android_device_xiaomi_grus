@@ -37,7 +37,6 @@ ro.vendor.use_data_netmgrd=true
 persist.vendor.ims.disableUserAgent=0
 
 # Media
-debug.stagefright.omx_default_rank=0
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 av.offload.enable=true
 media.stagefright.enable-aac=true
