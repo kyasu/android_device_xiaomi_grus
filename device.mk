@@ -225,12 +225,11 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
-    android.hardware.biometrics.fingerprint@2.3.vendor \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor:64 \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
     libudfpshandler \
     sensors.udfps \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
