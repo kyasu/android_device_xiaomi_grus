@@ -148,14 +148,6 @@ persist.vendor.dpmhalservice.enable=1
 # DRM
 drm.service.enabled=true
 
-# Fingerprint
-ro.hardware.fp.fod=true
-persist.vendor.sys.fp.fod.location.X_Y=448,1938
-persist.vendor.sys.fp.fod.size.width_height=184,185
-ro.hardware.fp.udfps=true
-persist.vendor.sys.fp.udfps.location.X_Y=448,1938
-persist.vendor.sys.fp.udfps.size.width_height=184,185
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
