@@ -18,7 +18,7 @@
 #define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
 
-#define FOD_UI_PATH "/sys/class/drm/card0-DSI-1/fod_ui_ready"
+#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
 
 #define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 
