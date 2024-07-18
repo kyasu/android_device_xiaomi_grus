@@ -227,6 +227,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
+    liblzma.vendor \
     libudfpshandler \
     sensors.udfps \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
