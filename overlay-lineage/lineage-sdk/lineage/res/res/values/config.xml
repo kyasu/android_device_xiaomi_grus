@@ -66,15 +66,19 @@
          app, they can be remapped here. The format is
          "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
-        <item>38-default-OLED:standard</item>
-        <item>01-warm:reading</item>
-        <item>02-cool:dynamic</item>
-        <item>P3_CE:dci_p3</item>
-        <item>srgb_d65:srgb</item>
+        <item>00none_gamma:standard</item>
+        <item>03srgb_d65:srgb</item>
+        <item>36P3_native:dci_p3</item>
+        <item>38hal_native:native</item>
+        <item>40smart_mc:smart_mc</item>
+        <item>41game1:game1</item>
+        <item>42game2:game2</item>
+        <item>43game3:game3</item>
+        <item>hal_hdr:hdr</item>
     </string-array>
 
     <!-- Should we filter any display modes which are unampped? -->
-    <bool name="config_filterDisplayModes">true</bool>
+    <bool name="config_filterDisplayModes">false</bool>
 
     <!-- Whether device has a notch -->
     <bool name="config_haveNotch">true</bool>
