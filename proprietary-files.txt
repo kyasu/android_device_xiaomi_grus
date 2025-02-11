@@ -1089,7 +1089,6 @@ vendor/lib64/hw/android.hardware.secure_element@1.0-impl.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/etc/elliptic_sensor.xml
 vendor/etc/init/init.vendor.sensors.rc
