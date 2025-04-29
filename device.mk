@@ -227,6 +227,8 @@ PRODUCT_PACKAGES += \
     sensors.udfps \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/xiaomi:libudfps_extension.xiaomi)
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
