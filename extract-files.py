@@ -98,6 +98,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/mediadrm/libwvdrmengine.so',
     ): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    (
+        'vendor/lib/hw/audio.primary.sdm710.so',
+        'vendor/lib/libaudioroute_ext.so'
+    ): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
