@@ -250,11 +250,12 @@ on boot
     chmod 0644 /sys/class/drm/card0-DSI-1/disp_param
     chown system system /sys/class/drm/card0-DSI-1/panel_info
     chmod 0644 /sys/class/drm/card0-DSI-1/panel_info
-    chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
-    chmod 0644 /sys/class/drm/card0-DSI-1/fod_ui_ready
 
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
+
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
+    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
 
 # MSM specific files that need to be created on /data
 on post-fs-data
