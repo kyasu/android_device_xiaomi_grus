@@ -27,6 +27,9 @@
 #
 #
 
+on late-fs
+    setprop bootreceiver.enable 0
+
 on init
     write /sys/class/leds/ir/max_brightness 63
 
